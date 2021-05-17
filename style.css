@@ -1,13 +1,17 @@
+body {
+  font-family: sans-serif;
+}
+
 .container {
   display: grid;
   height: 100vh;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 0.8fr 1.5fr 1fr 0.4;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 0.8fr 1.5fr 1fr 0.4fr;
   grid-template-areas:
-    "header header header header "
-    "sidebar main main main"
-    "sidebar content1 content2 content3"
-    "sidebar footer footer footer";
+    "header header"
+    "main main"
+    "content1 content2"
+    "footer footer";
   gap: 0.2rem;
 }
 
@@ -18,31 +22,35 @@
   width: 90%;
   /* border: 5px black solid; */
   /* border-radius: 10%; */
-  background: rgb(24, 68, 131);
+  background: rgb(182, 208, 252);
 }
 
-#sidebar {
-  background: rgb(24, 68, 131);
-  grid-area: sidebar;
+main {
+  grid-area: main;
 }
+
+/* #sidebar {
+  background: rgb(182, 208, 252);
+  grid-area: sidebar;
+} */
 
 #content1 {
-  background: rgb(24, 68, 131);
+  background: rgb(182, 208, 252);
   grid-area: content1;
 }
 
 #content2 {
-  background: rgb(24, 68, 131);
+  background: rgb(182, 208, 252);
   grid-area: content2;
 }
 
-#content3 {
-  background: rgb(24, 68, 131);
+/* #content3 {
+  background: rgb(182, 208, 252);
   grid-area: content3;
-}
+} */
 
 footer {
-  background: rgb(24, 68, 131);
+  background: rgb(182, 208, 252);
   grid-area: footer;
 }
 
@@ -51,14 +59,20 @@ h1 {
   text-align: center;
 }
 
-#main-links {
+.main-links {
   display: flex;
   justify-content: space-around;
   font-size: large;
   list-style-type: none;
 }
 
+a {
+  text-decoration: none;
+}
+
 .image {
+  display: flex;
+  justify-content: center;
   display: block;
   margin: 0 auto;
   width: 45%;
@@ -69,17 +83,30 @@ h1 {
   margin-bottom: 50px;
 }
 
+/* LIGTH/DARK MODE */
+
+#ligth_dark {
+  display: flex;
+  flex-direction: row-reverse;
+  margin: 0 0 0 94%;
+  border-radius: 10%;
+}
+
+.darkBackground {
+  background: #313133;
+}
+
 @media only screen and (max-width: 550px) {
   .container {
     grid-template-columns: 1fr;
-    grid-template-rows: 0.8fr 1.5fr 1fr 0.4;
+    grid-template-rows: 0.8fr 1.5fr 1fr 0.4fr;
     grid-template-areas:
       "header"
-      "sidebar"
+      /* "sidebar" */
       "main"
       "content1"
       "content2"
-      "content3"
+      /* "content3" */
       "footer";
   }
 }
