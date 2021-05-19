@@ -4,66 +4,75 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>To the moon and back</title>
+    <title>FAC application</title>
     <link rel="stylesheet" href="style.css" />
+    <script src="https://kit.fontawesome.com/34b0f0d8d7.js" crossorigin="anonymous"></script>
+    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
   </head>
   <body>
     <div class="container">
       <header id="header">
         <h1>A Hatful of Dreams!</h1>
-        <nav>
-          <div>
-            <ul class="main-links">
-              <li>
-                <a href="#content1">My journey so far</a>
-              </li>
-              <li>
-                <a href="#content2">Why Founders & Coders</a>
-              </li>
-              <li>
-                <a href="#footer">Contacts</a>
-              </li>
-            </ul>
-          </div>
-        </nav>
       </header>
     <main>
       <button id="ligth_dark">Ligth to Dark</button>
-        <img
-          src="https://i.stack.imgur.com/3Ap7t.jpg"
-          alt="Morpheus"
-          class="image"
-        />
+      <section class="slideshow-container">
+          <img src="https://i.stack.imgur.com/3Ap7t.jpg"
+          alt="Morpheus" 
+          class="carouselPhoto visible"/>
+      
+          <img src="https://i0.wp.com/fullcirclecinema.com/wp-content/uploads/2020/04/action_comics_vol_1_894_textless-1.jpg?resize=960%2C640&ssl=1"
+          alt="Death" 
+          class="carouselPhoto hidden"/>
+
+          <img src="https://www.adamdorman.com/_images/desire_big.jpg" 
+          alt="Desire" 
+          class="carouselPhoto hidden"/>
+      
+        <button id="prev">&#10094;</button>
+        <button id="next">&#10095;</button>
+      </section>
         <p class="quote">
-          <i
-            >"I've Been Up, And Been Down, And Been Up Again. Have I Learned
+          <i>"I've Been Up, And Been Down, And Been Up Again. Have I Learned
             Aught? I've Learned From My Mistakes, But I've Had More Time To
-            Commit More Mistakes."</i
-          >
+            Commit More Mistakes."</i>
         </p>
     </main>
-    <!-- <div id="sidebar">Sidebar</div> -->
-    <div id="content1">My journey so far</div>
+    <div id="sidebar">
+      <nav>
+        <div>
+          <ul class="side-links">
+            <li>
+              <a href="#content1">My journey so far</a>
+            </li>
+            <li>
+              <a href="#content2">Why Founders & Coders</a>
+            </li>
+            <li>
+              <a href="#footer">Contacts</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <div id="content1">My journey so far. Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+      Quas facere quis doloribus quia dolor qui exercitationem magnam tenetur tempora molestiae, nobis, minus, 
+      consequuntur doloremque error libero? Ex nostrum eaque ut? Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+      Temporibus, incidunt, dicta asperiores animi similique minima a quam porro, consectetur ab velit. 
+      Ipsa, impedit harum quos quasi cum voluptatum. Debitis, nisi.</div>
     <div id="content2">Why Founders & Coders</div>
-    <!-- <div id="content3">Content3</div> -->
     <footer id="footer">
       <nav>
         <div>
           <ul class="main-links">
             <li id="github">
-              <a href="https://github.com/danilo-cupido/FAC22-Application" target="_blank">
-                <!-- <img src="github.logo"> --> 
-                Github</a>
+              <a href="https://github.com/danilo-cupido/FAC22-Application" target="_blank"><i class="fab fa-github"></i></a>
             </li>
             <li id="codewars">
-              <a href="https://www.codewars.com/users/danilo-cupido" target="_blank">
-                <!-- <img src="codewars.logo"> -->
-                Codewars</a>
+              <a href="https://www.codewars.com/users/danilo-cupido" target="_blank"><span class="iconify" data-icon="cib:codewars" data-inline="false"></span></a>
             </li>
             <li id="freecodecamp">
-              <a href="https://www.freecodecamp.org/danilo-cupido"target="_blank">
-                <!-- <img src="freecodecamplogo"> --> 
-                freeCodeCamp</a>
+              <a href="https://www.freecodecamp.org/danilo-cupido"target="_blank"><i class="fab fa-free-code-camp"></i></a>
             </li>
           </ul>
         </div>

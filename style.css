@@ -5,22 +5,22 @@ body {
 .container {
   display: grid;
   height: 100vh;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 0fr 1fr 1fr;
   grid-template-rows: 0.8fr 1.5fr 1fr 0.4fr;
   grid-template-areas:
-    "header header"
-    "main main"
-    "content1 content2"
-    "footer footer";
+    "header header header"
+    "sidebar main main"
+    "sidebar content1 content2"
+    "footer footer footer";
   gap: 0.2rem;
 }
 
 #header {
   display: block;
   grid-area: header;
-  /* margin: 0 auto;
-  width: 90%;
-  /* border: 5px black solid; */
+  /* margin: 0 auto; */
+  /* width: 90%; */
+  border: 5px black solid;
   /* border-radius: 10%; */
   background: rgb(182, 208, 252);
 }
@@ -29,10 +29,72 @@ main {
   grid-area: main;
 }
 
-/* #sidebar {
+#sidebar {
   background: rgb(182, 208, 252);
-  grid-area: sidebar;
-} */
+  height: 40%; /* Full-height: remove this if you want "auto" height */
+  width: 160px; /* Set the width of the sidebar */
+  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+  z-index: 1; /* Stay on top */
+  top: 8px; /* Stay at the top */
+  left: 8px;
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 20px;
+}
+
+/* Slideshow*/
+.slideshow-container {
+  /* display:flex */
+  /* max-width: 1000px;
+  position: relative; */
+  margin: auto;
+  width: 50%;
+}
+
+.carouselPhoto {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  height: auto;
+}
+
+.visible {
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Next & previous buttons */
+#prev,
+#next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+#next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a grey background color */
+#prev:hover,
+#next:hover {
+  background-color: #f1f1f1;
+  color: black;
+}
 
 #content1 {
   background: rgb(182, 208, 252);
@@ -43,11 +105,6 @@ main {
   background: rgb(182, 208, 252);
   grid-area: content2;
 }
-
-/* #content3 {
-  background: rgb(182, 208, 252);
-  grid-area: content3;
-} */
 
 footer {
   background: rgb(182, 208, 252);
@@ -61,6 +118,14 @@ h1 {
 
 .main-links {
   display: flex;
+  justify-content: space-around;
+  font-size: large;
+  list-style-type: none;
+}
+
+.side-links {
+  display: flex;
+  flex-direction: column;
   justify-content: space-around;
   font-size: large;
   list-style-type: none;
@@ -86,6 +151,7 @@ a {
 /* LIGTH/DARK MODE */
 
 #ligth_dark {
+  cursor: pointer;
   display: flex;
   flex-direction: row-reverse;
   margin: 0 0 0 94%;
@@ -96,17 +162,38 @@ a {
   background: #313133;
 }
 
+.ligthText {
+  color: #fff59e;
+}
+
+/* On smaller screens, where width is less than 550px */
+
 @media only screen and (max-width: 550px) {
+  #sidebar {
+    grid-area: sidebar;
+  }
   .container {
     grid-template-columns: 1fr;
     grid-template-rows: 0.8fr 1.5fr 1fr 0.4fr;
     grid-template-areas:
       "header"
-      /* "sidebar" */
+      "sidebar"
       "main"
       "content1"
       "content2"
-      /* "content3" */
+      "content3"
       "footer";
   }
+}
+
+/* The navigation menu links */
+#sidebar a {
+  padding: 6px 8px 6px 16px;
+  color: #818181;
+  display: block;
+}
+
+/* When you mouse over the navigation links, change their color */
+#sidebar a:hover {
+  color: #f1f1f1;
 }
