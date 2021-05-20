@@ -16,7 +16,7 @@
       </header>
     <main>
       <button id="light_dark">Light to Dark</button>
-      <section class="slideshow-container">
+      <section class="slideshow-container visible">
         <figure class="carouselPhoto visible">
           <img src="https://i.stack.imgur.com/3Ap7t.jpg"
           alt="Morpheus"/>
@@ -37,18 +37,30 @@
         <button id="prev">&#10094;</button>
         <button id="next">&#10095;</button>
       </section>
+      <section class="journey hidden">
+        <h2>My journey so far</h2>
+      </section>
+      <section class="fac hidden">
+        <h2>Why Founders and Coders?</h2>
+      </section>
+      <section class="contacts hidden">
+        <h2>Contacts</h2>
+      </section>
     </main>
     <aside id="sidebar" class="fixed">
       <nav>
           <ul class="side-links">
-            <li>
-              <a href="#content1">My journey so far</a>
+            <li id="home">
+              Home
             </li>
-            <li>
-              <a href="#content2">Why Founders & Coders</a>
+            <li id="journey">
+              My journey so far
             </li>
-            <li>
-              <a href="#footer">Contacts</a>
+            <li id="fac">
+              Why Founders & Coders
+            </li>
+            <li id="contacts">
+              Contacts
             </li>
           </ul>
       </nav>

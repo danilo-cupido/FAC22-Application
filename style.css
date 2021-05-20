@@ -35,31 +35,18 @@ main {
 }
 
 .side-links {
+  cursor: pointer;
+  color: #551a8b;
   display: flex;
   flex-direction: column;
   justify-content: center;
   list-style-type: none;
 }
 
-/* The navigation menu links */
-#sidebar a {
-  padding: auto;
-  color: #818181;
-  display: block;
-}
-
-/* When you mouse over the navigation links, change their color */
-#sidebar a:hover {
-  color: #f1f1f1;
-}
-
 /* -------------------------------------------------------------------- */
 
 /* Slideshow*/
 .slideshow-container {
-  /* display:flex */
-  /* max-width: 1000px;
-  position: relative; */
   margin: auto;
   width: 50%;
 }
@@ -71,14 +58,6 @@ img {
   width: 50%;
   height: auto;
 }
-
-/* .carouselPhoto {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-  height: auto;
-} */
 
 .visible {
   display: block;

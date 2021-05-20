@@ -5,6 +5,7 @@ const links = Array.from(document.getElementsByTagName("a"));
 const header = document.getElementsByTagName("header");
 const footer = document.getElementsByTagName("footer");
 const fixed = Array.from(document.querySelectorAll(".fixed"));
+const sideList = Array.from(document.getElementsByTagName("li"));
 
 intro.addEventListener("click", () => {
   intro.textContent = "Welcome!";
@@ -14,6 +15,7 @@ intro.addEventListener("click", () => {
 
 lightDark.addEventListener("click", () => {
   links.forEach((link) => link.classList.toggle("lightText"));
+  sideList.forEach((list) => list.classList.toggle("lightText"));
   intro.classList.toggle("lightText");
 
   main.classList.toggle("mainDarkBackground");
@@ -82,3 +84,38 @@ function previousPhoto() {
 
 nextBtn.addEventListener("click", nextPhoto);
 previousBtn.addEventListener("click", previousPhoto);
+
+// Navigate through the sections
+
+const slideshowLink = document.querySelector("#home");
+const journeyLink = document.querySelector("#journey");
+const facLink = document.querySelector("#fac");
+const contactsLink = document.querySelector("#contacts");
+
+const slideshow = document.querySelector(".slideshow-container ");
+const journey = document.querySelector(".journey");
+const fac = document.querySelector(".fac");
+const contacts = document.querySelector(".contacts");
+
+function display(e) {
+  const obj = {
+    home: slideshow,
+    journey: journey,
+    fac: fac,
+    contacts: contacts,
+  };
+  for (let id in obj) {
+    if (id === e.target.id) {
+      obj[e.target.id].classList.remove("hidden");
+      obj[e.target.id].classList.add("visible");
+    } else {
+      obj[id].classList.add("hidden");
+      obj[id].classList.remove("visible");
+    }
+  }
+}
+
+slideshowLink.addEventListener("click", display);
+journeyLink.addEventListener("click", display);
+facLink.addEventListener("click", display);
+contactsLink.addEventListener("click", display);
