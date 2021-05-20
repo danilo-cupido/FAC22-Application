@@ -1,5 +1,5 @@
 const intro = document.querySelector("h1");
-const ligthDark = document.querySelector("#ligth_dark");
+const lightDark = document.querySelector("#light_dark");
 const main = document.querySelector("main");
 const links = Array.from(document.getElementsByTagName("a"));
 const header = document.getElementsByTagName("header");
@@ -12,16 +12,16 @@ intro.addEventListener("click", () => {
 
 // Dark Mode:
 
-ligthDark.addEventListener("click", () => {
-  links.forEach((link) => link.classList.toggle("ligthText"));
-  intro.classList.toggle("ligthText");
+lightDark.addEventListener("click", () => {
+  links.forEach((link) => link.classList.toggle("lightText"));
+  intro.classList.toggle("lightText");
 
   main.classList.toggle("mainDarkBackground");
   fixed.forEach((cont) => cont.classList.toggle("darkBackground"));
-  if (ligthDark.textContent === "Ligth to Dark") {
-    ligthDark.textContent = "Dark to Ligth";
+  if (lightDark.textContent === "Light to Dark") {
+    lightDark.textContent = "Dark to Light";
   } else {
-    ligthDark.textContent = "Ligth to Dark";
+    lightDark.textContent = "Light to Dark";
   }
 });
 

@@ -16,10 +16,8 @@ body {
 }
 
 #header {
-  display: block;
+  display: flex;
   grid-area: header;
-  border: 5px black solid;
-  background: rgb(182, 208, 252);
 }
 
 main {
@@ -45,7 +43,7 @@ main {
 
 /* The navigation menu links */
 #sidebar a {
-  padding: auto; /* 6px 8px 6px 16px; */
+  padding: auto;
   color: #818181;
   display: block;
 }
@@ -66,13 +64,21 @@ main {
   width: 50%;
 }
 
-.carouselPhoto {
+img {
   display: block;
   margin-left: auto;
   margin-right: auto;
   width: 50%;
   height: auto;
 }
+
+/* .carouselPhoto {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  height: auto;
+} */
 
 .visible {
   display: block;
@@ -113,10 +119,22 @@ main {
 }
 
 #footer {
+  display: flex;
   grid-area: footer;
 }
 
+#footer ul {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#footer i {
+  font-size: 30px;
+}
+
 h1 {
+  margin: auto;
   color: #551a8b;
   text-align: center;
 }
@@ -129,6 +147,7 @@ h1 {
 }
 
 a {
+  color: #551a8b;
   text-decoration: none;
 }
 
@@ -145,9 +164,9 @@ a {
   margin-bottom: 50px;
 }
 
-/* LIGTH/DARK MODE */
+/* LIGHT/DARK MODE */
 
-#ligth_dark {
+#light_dark {
   cursor: pointer;
   display: flex;
   flex-direction: row-reverse;
@@ -163,16 +182,22 @@ a {
   background: rgb(38, 43, 53);
 }
 
-.ligthText {
+.lightText {
   color: #fff59e;
 }
 
 /* On smaller screens, where width is less than 550px */
 
 @media only screen and (max-width: 550px) {
+  .side-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    list-style-type: none;
+  }
   .container {
     grid-template-columns: 1fr;
-    grid-template-rows: 0.8fr 1.5fr 1fr 0.4fr;
+    grid-template-rows: 0.8fr 0.5fr 1.5fr 0.4fr;
     grid-template-areas:
       "header"
       "sidebar"
