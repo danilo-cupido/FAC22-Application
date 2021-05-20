@@ -5,12 +5,12 @@ body {
 .container {
   display: grid;
   height: 100vh;
-  grid-template-columns: 0fr 1fr 1fr;
+  grid-template-columns: 0.3fr 1fr 1fr;
   grid-template-rows: 0.8fr 1.5fr 1fr 0.4fr;
   grid-template-areas:
     "header header header"
     "sidebar main main"
-    "sidebar content1 content2"
+    "sidebar main main"
     "footer footer footer";
   gap: 0.2rem;
 }
@@ -18,28 +18,44 @@ body {
 #header {
   display: block;
   grid-area: header;
-  /* margin: 0 auto; */
-  /* width: 90%; */
   border: 5px black solid;
-  /* border-radius: 10%; */
   background: rgb(182, 208, 252);
 }
 
 main {
   grid-area: main;
 }
+.fixed {
+  border: 5px black solid;
+  background: rgb(182, 208, 252);
+}
+
+/* SIDEBAR */
 
 #sidebar {
-  background: rgb(182, 208, 252);
-  height: 40%; /* Full-height: remove this if you want "auto" height */
-  width: 160px; /* Set the width of the sidebar */
-  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
-  z-index: 1; /* Stay on top */
-  top: 8px; /* Stay at the top */
-  left: 8px;
-  overflow-x: hidden; /* Disable horizontal scroll */
-  padding-top: 20px;
+  grid-area: sidebar;
 }
+
+.side-links {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  list-style-type: none;
+}
+
+/* The navigation menu links */
+#sidebar a {
+  padding: auto; /* 6px 8px 6px 16px; */
+  color: #818181;
+  display: block;
+}
+
+/* When you mouse over the navigation links, change their color */
+#sidebar a:hover {
+  color: #f1f1f1;
+}
+
+/* -------------------------------------------------------------------- */
 
 /* Slideshow*/
 .slideshow-container {
@@ -96,36 +112,17 @@ main {
   color: black;
 }
 
-#content1 {
-  background: rgb(182, 208, 252);
-  grid-area: content1;
-}
-
-#content2 {
-  background: rgb(182, 208, 252);
-  grid-area: content2;
-}
-
-footer {
-  background: rgb(182, 208, 252);
+#footer {
   grid-area: footer;
 }
 
 h1 {
-  color: rgb(135, 72, 141);
+  color: #551a8b;
   text-align: center;
 }
 
 .main-links {
   display: flex;
-  justify-content: space-around;
-  font-size: large;
-  list-style-type: none;
-}
-
-.side-links {
-  display: flex;
-  flex-direction: column;
   justify-content: space-around;
   font-size: large;
   list-style-type: none;
@@ -158,8 +155,12 @@ a {
   border-radius: 10%;
 }
 
-.darkBackground {
+.mainDarkBackground {
   background: #313133;
+}
+
+.darkBackground {
+  background: rgb(38, 43, 53);
 }
 
 .ligthText {
@@ -169,9 +170,6 @@ a {
 /* On smaller screens, where width is less than 550px */
 
 @media only screen and (max-width: 550px) {
-  #sidebar {
-    grid-area: sidebar;
-  }
   .container {
     grid-template-columns: 1fr;
     grid-template-rows: 0.8fr 1.5fr 1fr 0.4fr;
@@ -179,21 +177,6 @@ a {
       "header"
       "sidebar"
       "main"
-      "content1"
-      "content2"
-      "content3"
       "footer";
   }
-}
-
-/* The navigation menu links */
-#sidebar a {
-  padding: 6px 8px 6px 16px;
-  color: #818181;
-  display: block;
-}
-
-/* When you mouse over the navigation links, change their color */
-#sidebar a:hover {
-  color: #f1f1f1;
 }

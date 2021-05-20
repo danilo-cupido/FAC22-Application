@@ -2,6 +2,9 @@ const intro = document.querySelector("h1");
 const ligthDark = document.querySelector("#ligth_dark");
 const main = document.querySelector("main");
 const links = Array.from(document.getElementsByTagName("a"));
+const header = document.getElementsByTagName("header");
+const footer = document.getElementsByTagName("footer");
+const fixed = Array.from(document.querySelectorAll(".fixed"));
 
 intro.addEventListener("click", () => {
   intro.textContent = "Welcome!";
@@ -11,8 +14,10 @@ intro.addEventListener("click", () => {
 
 ligthDark.addEventListener("click", () => {
   links.forEach((link) => link.classList.toggle("ligthText"));
+  intro.classList.toggle("ligthText");
 
-  main.classList.toggle("darkBackground");
+  main.classList.toggle("mainDarkBackground");
+  fixed.forEach((cont) => cont.classList.toggle("darkBackground"));
   if (ligthDark.textContent === "Ligth to Dark") {
     ligthDark.textContent = "Dark to Ligth";
   } else {
