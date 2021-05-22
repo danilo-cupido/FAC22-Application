@@ -18,6 +18,10 @@
 
 main {
   grid-area: main;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }
 
 .fixed {
@@ -42,10 +46,8 @@ main {
 
 nav li {
   display: inline;
-  margin-inline-start: auto;
-  margin-inline-end: auto;
   text-align: center;
-  margin: 10px 0;
+  margin: 10px auto;
   cursor: pointer;
   font-weight: bold;
   font-size: 1.2rem;
@@ -63,13 +65,15 @@ nav li:hover {
 .slideshow-container {
   margin: auto;
   width: 70%;
+  position: relative;
 }
 
 img {
   display: block;
   margin: 0 auto;
-  width: 50%;
+  width: 60%;
   border: 5px solid black;
+  box-shadow: 2px 2px 2px gray;
 }
 
 figcaption {
@@ -90,22 +94,27 @@ figcaption {
 #next {
   cursor: pointer;
   position: absolute;
-  top: 50%;
+  top: 45%;
   width: auto;
   padding: 16px;
-  /* margin-top: -22px; */
   color: white;
   font-weight: bold;
   font-size: 18px;
+  text-shadow: 1px 1px 1px gray;
   transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
+  border: none;
   user-select: none;
+}
+
+#prev {
+  left: 15%;
+  border-radius: 5px 0 0 5px;
 }
 
 /* Position the "next button" to the right */
 #next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
+  right: 15%;
+  border-radius: 0 5px 5px 0;
 }
 
 /* On hover, add a grey background color */
@@ -113,6 +122,10 @@ figcaption {
 #next:hover {
   background-color: #f1f1f1;
   color: black;
+}
+
+.content {
+  height: 90%;
 }
 
 #footer {
@@ -168,10 +181,14 @@ a {
 
 #light_dark {
   cursor: pointer;
-  display: flex;
-  flex-direction: row-reverse;
-  margin: 0 0 0 94%;
-  border-radius: 10%;
+  border-radius: 5px;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  padding: 7px 18px;
+  border: 2px solid black;
+  box-shadow: 1px 1px 1px gray;
+  background-color: rgb(182, 208, 252);
 }
 
 .mainDarkBackground {
