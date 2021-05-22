@@ -42,7 +42,7 @@ main {
   grid-area: sidebar;
 }
 
-.side-links {
+.side-links-box {
   padding-left: 0;
   color: #551a8b;
   display: flex;
@@ -193,7 +193,7 @@ a {
   padding: 7px 18px;
   border: 2px solid black;
   box-shadow: 1px 1px 1px gray;
-  background-color: rgb(182, 208, 252);
+  background-color: rgb(254, 228, 149);
 }
 
 .mainDarkBackground {
@@ -239,19 +239,38 @@ a {
 /* On smaller screens, where width is less than 550px */
 
 @media only screen and (max-width: 550px) {
-  .side-links {
-    display: flex;
+  .side-links-box {
     flex-direction: row;
-    justify-content: center;
-    list-style-type: none;
+    flex-wrap: wrap;
+    margin: 5px auto;
   }
+
+  nav li {
+    width: 40%;
+    margin: 5px auto;
+  }
+
+  .main-links {
+    margin: 8px auto;
+  }
+
   .container {
     grid-template-columns: 1fr;
-    grid-template-rows: 0.8fr 0.5fr 1.5fr 0.3fr;
+    grid-template-rows: 0.6fr 0.4fr 1.5fr 0.2fr;
     grid-template-areas:
       "header"
       "sidebar"
       "main"
       "footer";
+  }
+
+  .content {
+    height: 85%;
+  }
+
+  main {
+    align-items: flex-end;
+  }
+  #light_dark {
   }
 }

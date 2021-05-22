@@ -17,6 +17,7 @@ intro.addEventListener("click", () => {
 
 // Dark Mode:
 
+let darkMode = false;
 lightDark.addEventListener("click", () => {
   links.forEach((link) => link.classList.toggle("lightText"));
   sideList.forEach((list) => list.classList.toggle("lightText"));
@@ -29,10 +30,14 @@ lightDark.addEventListener("click", () => {
 
   main.classList.toggle("mainDarkBackground");
   fixed.forEach((cont) => cont.classList.toggle("darkBackground"));
-  if (lightDark.textContent === "Light to Dark") {
-    lightDark.textContent = "Dark to Light";
+  if (darkMode === false) {
+    lightDark.innerHTML =
+      '<i class="fas fa-moon"></i> <i class="fas fa-long-arrow-alt-right"></i> <i class="fas fa-sun">';
+    darkMode = true;
   } else {
-    lightDark.textContent = "Light to Dark";
+    lightDark.innerHTML =
+      '<i class="fas fa-sun"></i> <i class="fas fa-long-arrow-alt-right"></i> <i class="fas fa-moon"></i>';
+    darkMode = false;
   }
 });
 
