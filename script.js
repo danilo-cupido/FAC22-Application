@@ -33,10 +33,12 @@ lightDark.addEventListener("click", () => {
   if (darkMode === false) {
     lightDark.innerHTML =
       '<i class="fas fa-moon"></i> <i class="fas fa-long-arrow-alt-right"></i> <i class="fas fa-sun">';
+    lightDark.style.backgroundColor = "#5b89ab";
     darkMode = true;
   } else {
     lightDark.innerHTML =
       '<i class="fas fa-sun"></i> <i class="fas fa-long-arrow-alt-right"></i> <i class="fas fa-moon"></i>';
+    lightDark.style.backgroundColor = "rgb(254, 228, 149)";
     darkMode = false;
   }
 });

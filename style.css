@@ -197,7 +197,7 @@ a {
 }
 
 .mainDarkBackground {
-  background: #808080;
+  background: #9fbbd4;
 }
 
 .darkBackground {
@@ -270,7 +270,5 @@ a {
 
   main {
     align-items: flex-end;
-  }
-  #light_dark {
   }
 }
