@@ -2,7 +2,7 @@
   display: grid;
   height: 97vh;
   grid-template-columns: 0.3fr 1fr 1fr;
-  grid-template-rows: 0.8fr 1.5fr 1fr 0.4fr;
+  grid-template-rows: 0.8fr 1.5fr 1fr 0.3fr;
   grid-template-areas:
     "header header header"
     "sidebar main main"
@@ -33,7 +33,6 @@ main {
 
 .side-links {
   padding-left: 0;
-  cursor: pointer;
   color: #551a8b;
   display: flex;
   flex-direction: column;
@@ -41,30 +40,41 @@ main {
   list-style-type: none;
 }
 
+nav li {
+  display: inline;
+  margin-inline-start: auto;
+  margin-inline-end: auto;
+  text-align: center;
+  margin: 10px 0;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1.2rem;
+  text-shadow: 1px 1px 1px gray;
+}
+
+nav li:hover {
+  color: #fff59e;
+}
+
 /* -------------------------------------------------------------------- */
 
 /* Slideshow*/
+
 .slideshow-container {
-  /* position: relative; */
   margin: auto;
   width: 70%;
 }
-
-/* figure {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-} */
 
 img {
   display: block;
   margin: 0 auto;
   width: 50%;
+  border: 5px solid black;
 }
 
 figcaption {
   text-align: center;
+  padding-top: 4px;
 }
 
 .visible {
@@ -124,31 +134,34 @@ h1 {
   margin: auto;
   color: #551a8b;
   text-align: center;
+  font-weight: bold;
+  text-shadow: 1px 1px 1px gray;
+}
+
+h2 {
+  margin: auto;
+  color: #551a8b;
+  text-align: center;
+  font-weight: bold;
+  text-shadow: 1px 1px 1px gray;
+}
+
+p {
+  padding: 5%;
 }
 
 .main-links {
   display: flex;
+  align-items: center;
   justify-content: space-around;
   font-size: large;
   list-style-type: none;
+  padding-left: 0;
 }
 
 a {
   color: #551a8b;
   text-decoration: none;
-}
-
-.image {
-  display: flex;
-  justify-content: center;
-  display: block;
-  margin: 0 auto;
-  width: 45%;
-}
-
-.quote {
-  text-align: center;
-  margin-bottom: 50px;
 }
 
 /* LIGHT/DARK MODE */
@@ -184,7 +197,7 @@ a {
   }
   .container {
     grid-template-columns: 1fr;
-    grid-template-rows: 0.8fr 0.5fr 1.5fr 0.4fr;
+    grid-template-rows: 0.8fr 0.5fr 1.5fr 0.3fr;
     grid-template-areas:
       "header"
       "sidebar"
