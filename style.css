@@ -1,3 +1,7 @@
+body {
+  background-color: whitesmoke;
+}
+
 .container {
   display: grid;
   height: 97vh;
@@ -11,9 +15,12 @@
   gap: 0.2rem;
 }
 
-#header {
+header {
+  border: 5px black solid;
   display: flex;
   grid-area: header;
+  background: url("Images/day.jpg") center no-repeat;
+  background-size: cover;
 }
 
 main {
@@ -26,7 +33,7 @@ main {
 
 .fixed {
   border: 5px black solid;
-  background: rgb(182, 208, 252);
+  background: rgb(252, 213, 94);
 }
 
 /* SIDEBAR */
@@ -92,6 +99,7 @@ figcaption {
 /* Next & previous buttons */
 #prev,
 #next {
+  background-color: transparent; /*  #d0d0d0; */
   cursor: pointer;
   position: absolute;
   top: 45%;
@@ -111,7 +119,6 @@ figcaption {
   border-radius: 5px 0 0 5px;
 }
 
-/* Position the "next button" to the right */
 #next {
   right: 15%;
   border-radius: 0 5px 5px 0;
@@ -120,7 +127,7 @@ figcaption {
 /* On hover, add a grey background color */
 #prev:hover,
 #next:hover {
-  background-color: #f1f1f1;
+  background-color: transparent; /* #9a9a9a; */
   color: black;
 }
 
@@ -192,14 +199,24 @@ a {
 }
 
 .mainDarkBackground {
-  background: #313133;
+  background: #808080;
 }
 
 .darkBackground {
-  background: rgb(38, 43, 53);
+  background: rgb(42, 91, 127);
+}
+
+.darkHeaderBackground {
+  background: url("Images/night.jpg") center no-repeat;
+  background-size: cover;
 }
 
 .lightText {
+  color: #fff59e;
+  text-shadow: 1px 1px 1px gray;
+}
+
+.lightCaption {
   color: #fff59e;
 }
 

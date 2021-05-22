@@ -3,7 +3,7 @@ const titles = Array.from(document.querySelectorAll("h2"));
 const lightDark = document.querySelector("#light_dark");
 const main = document.querySelector("main");
 const links = Array.from(document.getElementsByTagName("a"));
-const header = document.getElementsByTagName("header");
+const header = document.getElementById("header");
 const footer = document.getElementsByTagName("footer");
 const fixed = Array.from(document.querySelectorAll(".fixed"));
 const sideList = Array.from(document.getElementsByTagName("li"));
@@ -18,9 +18,10 @@ intro.addEventListener("click", () => {
 lightDark.addEventListener("click", () => {
   links.forEach((link) => link.classList.toggle("lightText"));
   sideList.forEach((list) => list.classList.toggle("lightText"));
+  header.classList.toggle("darkHeaderBackground");
   intro.classList.toggle("lightText");
   titles.forEach((title) => title.classList.toggle("lightText"));
-  captions.forEach((caption) => caption.classList.toggle("lightText"));
+  captions.forEach((caption) => caption.classList.toggle("lightCaption"));
 
   main.classList.toggle("mainDarkBackground");
   fixed.forEach((cont) => cont.classList.toggle("darkBackground"));
