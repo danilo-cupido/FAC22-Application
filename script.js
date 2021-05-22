@@ -8,6 +8,8 @@ const footer = document.getElementsByTagName("footer");
 const fixed = Array.from(document.querySelectorAll(".fixed"));
 const sideList = Array.from(document.getElementsByTagName("li"));
 const captions = Array.from(document.querySelectorAll("figcaption"));
+const prev = document.getElementById("prev");
+const next = document.getElementById("next");
 
 intro.addEventListener("click", () => {
   intro.textContent = "Welcome!";
@@ -20,6 +22,8 @@ lightDark.addEventListener("click", () => {
   sideList.forEach((list) => list.classList.toggle("lightText"));
   header.classList.toggle("darkHeaderBackground");
   intro.classList.toggle("lightText");
+  prev.classList.toggle("darkPrev");
+  next.classList.toggle("darkNext");
   titles.forEach((title) => title.classList.toggle("lightText"));
   captions.forEach((caption) => caption.classList.toggle("lightCaption"));
 

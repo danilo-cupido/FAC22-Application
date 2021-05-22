@@ -62,7 +62,7 @@ nav li {
 }
 
 nav li:hover {
-  color: #fff59e;
+  color: black;
 }
 
 /* -------------------------------------------------------------------- */
@@ -97,15 +97,14 @@ figcaption {
 }
 
 /* Next & previous buttons */
-#prev,
-#next {
+section button {
   background-color: transparent; /*  #d0d0d0; */
   cursor: pointer;
   position: absolute;
   top: 45%;
   width: auto;
   padding: 16px;
-  color: white;
+  color: #551a8b;
   font-weight: bold;
   font-size: 18px;
   text-shadow: 1px 1px 1px gray;
@@ -124,11 +123,9 @@ figcaption {
   border-radius: 0 5px 5px 0;
 }
 
-/* On hover, add a grey background color */
-#prev:hover,
-#next:hover {
-  background-color: transparent; /* #9a9a9a; */
-  color: black;
+section button:hover {
+  background-color: transparent;
+  color: #fff59e;
 }
 
 .content {
@@ -187,6 +184,7 @@ a {
 /* LIGHT/DARK MODE */
 
 #light_dark {
+  font-weight: bold;
   cursor: pointer;
   border-radius: 5px;
   position: absolute;
@@ -218,6 +216,24 @@ a {
 
 .lightCaption {
   color: #fff59e;
+}
+
+.darkPrev {
+  color: #fff59e;
+}
+
+.darkPrev:hover {
+  background-color: transparent;
+  color: rgb(42, 91, 127);
+}
+
+.darkNext {
+  color: #fff59e;
+}
+
+.darkNext:hover {
+  background-color: transparent;
+  color: rgb(42, 91, 127);
 }
 
 /* On smaller screens, where width is less than 550px */
