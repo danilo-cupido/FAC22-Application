@@ -132,7 +132,16 @@ section button:hover {
 /* -------------------------------------------------------------------- */
 
 .content {
-  height: 90%;
+  height: 82%;
+}
+
+.text-container {
+  height: 95%;
+  overflow-y: scroll;
+}
+
+p {
+  padding: 0 3%;
 }
 
 #footer {
@@ -166,8 +175,8 @@ h2 {
   text-shadow: 1px 1px 1px gray;
 }
 
-p {
-  padding: 5%;
+.innerTitle {
+  padding-bottom: 3%;
 }
 
 .main-links {
@@ -242,6 +251,11 @@ a {
 /* On smaller screens, where width is less than 550px */
 
 @media only screen and (max-width: 550px) {
+  #sidebar {
+    display: flex;
+    align-items: center;
+  }
+
   .side-links-box {
     flex-direction: row;
     flex-wrap: wrap;
@@ -268,6 +282,10 @@ a {
   }
 
   .content {
+    height: 45vh;
+  }
+
+  .text-container {
     height: 85%;
   }
 
@@ -295,5 +313,17 @@ a {
 
   #next {
     right: 3%;
+  }
+}
+
+/* On iPhone 5 and smaller */
+
+@media only screen and (max-width: 320px) {
+  .content {
+    height: 40vh;
+  }
+
+  .text-container {
+    height: 80%;
   }
 }
