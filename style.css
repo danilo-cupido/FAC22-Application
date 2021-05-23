@@ -1,5 +1,5 @@
 body {
-  background-color: whitesmoke;
+  background-color: rgb(226, 226, 226);
 }
 
 .container {
@@ -97,8 +97,9 @@ figcaption {
 }
 
 /* Next & previous buttons */
+
 section button {
-  background-color: transparent; /*  #d0d0d0; */
+  background-color: transparent;
   cursor: pointer;
   position: absolute;
   top: 45%;
@@ -127,6 +128,8 @@ section button:hover {
   background-color: transparent;
   color: #fff59e;
 }
+
+/* -------------------------------------------------------------------- */
 
 .content {
   height: 90%;
@@ -270,5 +273,27 @@ a {
 
   main {
     align-items: flex-end;
+  }
+
+  .slideshow-container {
+    margin: 0;
+    width: 100%;
+    height: 85%;
+  }
+
+  .carouselPhoto {
+    margin: 0;
+  }
+
+  section button {
+    top: 27%;
+  }
+
+  #prev {
+    left: 3%;
+  }
+
+  #next {
+    right: 3%;
   }
 }
