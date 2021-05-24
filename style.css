@@ -107,7 +107,7 @@ figcaption {
 
 /* Next & previous buttons */
 
-section button {
+.carouselBtn {
   background-color: transparent;
   cursor: pointer;
   position: absolute;
@@ -125,15 +125,19 @@ section button {
 
 #prev {
   left: 15%;
-  border-radius: 5px 0 0 5px;
 }
 
 #next {
   right: 15%;
-  border-radius: 0 5px 5px 0;
 }
 
-section button:hover {
+#play,
+#pause {
+  top: 12%;
+  left: 22%;
+}
+
+.carouselBtn:hover {
   background-color: transparent;
   color: #fff59e;
 }
@@ -239,20 +243,11 @@ h2 {
   color: #fff59e;
 }
 
-.darkPrev {
+.darkCarouselBtn {
   color: #fff59e;
 }
 
-.darkPrev:hover {
-  background-color: transparent;
-  color: rgb(42, 91, 127);
-}
-
-.darkNext {
-  color: #fff59e;
-}
-
-.darkNext:hover {
+.darkCarouselBtn:hover {
   background-color: transparent;
   color: rgb(42, 91, 127);
 }

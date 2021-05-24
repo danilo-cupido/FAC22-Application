@@ -9,8 +9,8 @@ const fixed = Array.from(document.querySelectorAll(".fixed"));
 const sideList = Array.from(document.getElementsByClassName("sideList"));
 const footerList = Array.from(document.getElementsByClassName("footerList"));
 const captions = Array.from(document.querySelectorAll("figcaption"));
-const prev = document.getElementById("prev");
-const next = document.getElementById("next");
+const carouselBtn = Array.from(document.getElementsByClassName("carouselBtn"));
+// const next = document.getElementById("next");
 
 intro.addEventListener("click", () => {
   intro.textContent = "Welcome!";
@@ -34,8 +34,7 @@ lightDark.addEventListener("click", () => {
   footerList.forEach((fList) => fList.classList.toggle("lightText"));
   header.classList.toggle("darkHeaderBackground");
   intro.classList.toggle("lightText");
-  prev.classList.toggle("darkPrev");
-  next.classList.toggle("darkNext");
+  carouselBtn.forEach((button) => button.classList.toggle("darkCarouselBtn"));
   titles.forEach((title) => title.classList.toggle("lightText"));
   captions.forEach((caption) => caption.classList.toggle("lightCaption"));
 
@@ -111,6 +110,29 @@ function previousPhoto() {
 
 nextBtn.addEventListener("click", nextPhoto);
 previousBtn.addEventListener("click", previousPhoto);
+
+// Carousel Play/Pause
+
+const playBtn = document.getElementById("play");
+const pauseBtn = document.getElementById("pause");
+let autoplay;
+
+function play() {
+  pauseBtn.style.display = "block";
+  playBtn.style.display = "none";
+  autoplay = setInterval(nextPhoto, 2000);
+}
+
+function pause() {
+  playBtn.style.display = "block";
+  pauseBtn.style.display = "none";
+  clearInterval(autoplay);
+}
+
+playBtn.addEventListener("click", play);
+pauseBtn.addEventListener("click", pause);
+
+play();
 
 // Navigate through the sections
 
