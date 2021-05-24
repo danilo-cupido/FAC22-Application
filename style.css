@@ -55,14 +55,23 @@ nav li {
   display: inline;
   text-align: center;
   margin: 10px auto;
+  padding: 5px 10px;
   cursor: pointer;
   font-weight: bold;
   font-size: 1.2rem;
   text-shadow: 1px 1px 1px gray;
 }
 
-nav li:hover {
-  color: black;
+.lightHover:hover {
+  border-radius: 5px;
+  color: rgb(252, 213, 94);
+  background-color: #551a8b;
+}
+
+.clicked {
+  border-radius: 5px;
+  color: rgb(252, 213, 94);
+  background-color: #551a8b;
 }
 
 /* -------------------------------------------------------------------- */
@@ -188,7 +197,7 @@ h2 {
   padding-left: 0;
 }
 
-a {
+.footerList {
   color: #551a8b;
   text-decoration: none;
 }
@@ -246,6 +255,18 @@ a {
 .darkNext:hover {
   background-color: transparent;
   color: rgb(42, 91, 127);
+}
+
+.darkHover:hover {
+  border-radius: 5px;
+  color: rgb(42, 91, 127);
+  background-color: #fff59e;
+}
+
+.darkClicked {
+  border-radius: 5px;
+  color: rgb(42, 91, 127);
+  background-color: #fff59e;
 }
 
 /* On smaller screens, where width is less than 550px */

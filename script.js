@@ -6,7 +6,8 @@ const links = Array.from(document.getElementsByTagName("a"));
 const header = document.getElementById("header");
 const footer = document.getElementsByTagName("footer");
 const fixed = Array.from(document.querySelectorAll(".fixed"));
-const sideList = Array.from(document.getElementsByTagName("li"));
+const sideList = Array.from(document.getElementsByClassName("sideList"));
+const footerList = Array.from(document.getElementsByClassName("footerList"));
 const captions = Array.from(document.querySelectorAll("figcaption"));
 const prev = document.getElementById("prev");
 const next = document.getElementById("next");
@@ -19,8 +20,18 @@ intro.addEventListener("click", () => {
 
 let darkMode = false;
 lightDark.addEventListener("click", () => {
-  links.forEach((link) => link.classList.toggle("lightText"));
-  sideList.forEach((list) => list.classList.toggle("lightText"));
+  sideList.forEach((list) => {
+    list.classList.toggle("lightText");
+    list.classList.toggle("darkHover");
+    if (list.classList.contains("darkClicked")) {
+      list.classList.remove("darkClicked");
+      list.classList.add("clicked");
+    } else if (list.classList.contains("clicked")) {
+      list.classList.remove("clicked");
+      list.classList.add("darkClicked");
+    }
+  });
+  footerList.forEach((fList) => fList.classList.toggle("lightText"));
   header.classList.toggle("darkHeaderBackground");
   intro.classList.toggle("lightText");
   prev.classList.toggle("darkPrev");
@@ -115,18 +126,28 @@ const contacts = document.querySelector(".contacts");
 
 function display(e) {
   const obj = {
-    home: slideshow,
-    journey: journey,
-    fac: fac,
-    contacts: contacts,
+    home: [slideshow, slideshowLink],
+    journey: [journey, journeyLink],
+    fac: [fac, facLink],
+    contacts: [contacts, contactsLink],
   };
   for (let id in obj) {
     if (id === e.target.id) {
-      obj[e.target.id].classList.remove("hidden");
-      obj[e.target.id].classList.add("visible");
+      obj[e.target.id][0].classList.remove("hidden");
+      obj[e.target.id][0].classList.add("visible");
+      if (darkMode === true) {
+        obj[e.target.id][1].classList.add("darkClicked");
+      } else {
+        obj[e.target.id][1].classList.add("clicked");
+      }
     } else {
-      obj[id].classList.add("hidden");
-      obj[id].classList.remove("visible");
+      obj[id][0].classList.add("hidden");
+      obj[id][0].classList.remove("visible");
+      if (darkMode === true) {
+        obj[id][1].classList.remove("darkClicked");
+      } else {
+        obj[id][1].classList.remove("clicked");
+      }
     }
   }
 }
