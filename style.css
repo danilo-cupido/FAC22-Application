@@ -188,6 +188,10 @@ h2 {
   text-shadow: 1px 1px 1px gray;
 }
 
+p {
+  font-size: large;
+}
+
 .innerTitle {
   padding-bottom: 3%;
 }
@@ -319,7 +323,8 @@ h2 {
     margin: 0;
   }
 
-  section button {
+  #prev,
+  #next {
     top: 27%;
   }
 
