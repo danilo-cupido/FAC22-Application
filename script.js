@@ -138,11 +138,13 @@ play();
 
 const slideshowLink = document.querySelector("#home");
 const journeyLink = document.querySelector("#journey");
+const codingLink = document.querySelector("#coding");
 const facLink = document.querySelector("#fac");
 const contactsLink = document.querySelector("#contacts");
 
 const slideshow = document.querySelector(".slideshow-container ");
 const journey = document.querySelector(".journey");
+const coding = document.querySelector(".coding");
 const fac = document.querySelector(".fac");
 const contacts = document.querySelector(".contacts");
 
@@ -150,6 +152,7 @@ function display(e) {
   const obj = {
     home: [slideshow, slideshowLink],
     journey: [journey, journeyLink],
+    coding: [coding, codingLink],
     fac: [fac, facLink],
     contacts: [contacts, contactsLink],
   };
@@ -176,5 +179,6 @@ function display(e) {
 
 slideshowLink.addEventListener("click", display);
 journeyLink.addEventListener("click", display);
+codingLink.addEventListener("click", display);
 facLink.addEventListener("click", display);
 contactsLink.addEventListener("click", display);
