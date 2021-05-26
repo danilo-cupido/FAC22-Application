@@ -150,11 +150,10 @@ figcaption {
 
 .text-container {
   height: 95%;
-  overflow-y: scroll;
 }
 
 p {
-  padding: 0 3%;
+  padding: 0 10%;
 }
 
 #footer {
@@ -283,8 +282,10 @@ p {
   }
 
   nav li {
-    width: 40%;
+    width: 27%;
     margin: 5px auto;
+    font-size: 14px;
+    padding: 3px;
   }
 
   .main-links {
@@ -307,6 +308,7 @@ p {
 
   .text-container {
     height: 85%;
+    overflow-y: scroll;
   }
 
   main {
@@ -346,5 +348,12 @@ p {
 
   .text-container {
     height: 80%;
+  }
+
+  nav li {
+    font-size: 12px;
+  }
+  h2 {
+    font-size: 18px;
   }
 }
