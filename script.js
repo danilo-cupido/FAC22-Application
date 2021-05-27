@@ -10,7 +10,6 @@ const sideList = Array.from(document.getElementsByClassName("sideList"));
 const footerList = Array.from(document.getElementsByClassName("footerList"));
 const captions = Array.from(document.querySelectorAll("figcaption"));
 const carouselBtn = Array.from(document.getElementsByClassName("carouselBtn"));
-// const next = document.getElementById("next");
 
 intro.addEventListener("click", () => {
   intro.textContent = "Welcome!";
