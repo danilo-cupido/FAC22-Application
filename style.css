@@ -80,7 +80,7 @@ nav li {
   position: relative;
 }
 
-img {
+figure img {
   display: block;
   margin: 0 auto;
   width: 60%;
@@ -163,6 +163,23 @@ p a {
   text-decoration: none;
   color: black;
   font-weight: bold;
+}
+
+.journey p {
+  padding: 0 5% 0 10%;
+}
+
+.journey .text-container {
+  display: flex;
+  align-items: center;
+  padding-right: 5%;
+}
+
+.journey .text-container img {
+  width: 25%;
+  height: auto;
+  box-shadow: 3px 3px 3px grey;
+  border-radius: 10px;
 }
 
 #footer {
@@ -388,18 +405,33 @@ p {
   #next {
     right: 3%;
   }
-}
 
-.contacts a {
-  font-size: 14px;
-}
+  #play,
+  #pause {
+    top: 8%;
+    left: 18%;
+  }
 
-.contacts ul {
-  padding: 20px 35px;
-}
+  .journey .text-container {
+    padding-right: 0;
+    flex-direction: column;
+  }
 
-.contacts ul li {
-  padding: 8px;
+  .journey .text-container img {
+    width: 75%;
+  }
+
+  .contacts a {
+    font-size: 14px;
+  }
+
+  .contacts ul {
+    padding: 20px 35px;
+  }
+
+  .contacts ul li {
+    padding: 8px;
+  }
 }
 
 /* On iPhone 5 and smaller */
