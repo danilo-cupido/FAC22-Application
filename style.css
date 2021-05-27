@@ -1,7 +1,3 @@
-body {
-  background-color: rgb(226, 226, 226);
-}
-
 .container {
   display: grid;
   height: 97vh;
@@ -118,7 +114,7 @@ figcaption {
   font-weight: bold;
   font-size: 18px;
   text-shadow: 1px 1px 1px gray;
-  transition: 0.6s ease;
+  transition: 0.5s ease;
   border: none;
   user-select: none;
 }
@@ -150,10 +146,23 @@ figcaption {
 
 .text-container {
   height: 95%;
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.text-container::-webkit-scrollbar {
+  display: none;
 }
 
 p {
   padding: 0 10%;
+}
+
+p a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
 }
 
 #footer {
@@ -172,7 +181,10 @@ p {
 }
 
 h1 {
-  margin: auto;
+  transition: 0.5s ease;
+  font-family: monospace, sans-serif;
+  font-size: 50px;
+  margin: auto 20px;
   color: #551a8b;
   text-align: center;
   font-weight: bold;
@@ -180,6 +192,8 @@ h1 {
 }
 
 h2 {
+  transition: 0.5s ease;
+  font-family: monospace, sans-serif;
   margin: auto;
   color: #551a8b;
   text-align: center;
@@ -187,12 +201,37 @@ h2 {
   text-shadow: 1px 1px 1px gray;
 }
 
+.innerTitle {
+  padding-bottom: 2.6%;
+}
+
 p {
+  font-family: monospace, sans-serif;
   font-size: large;
 }
 
-.innerTitle {
-  padding-bottom: 3%;
+.contacts a {
+  text-decoration: none;
+  color: black;
+  font-family: monospace, sans-serif;
+  font-size: 20px;
+}
+
+.contacts a:hover {
+  font-weight: bold;
+}
+
+.contacts ul li {
+  padding: 10px;
+}
+
+.contacts ul {
+  padding: 40px 70px;
+  list-style-type: none;
+  margin-top: 30px;
+  box-shadow: 2px 3px 5px gray;
+  border-radius: 5px;
+  background-color: rgb(202, 223, 196);
 }
 
 .main-links {
@@ -207,6 +246,14 @@ p {
 .footerList {
   color: #551a8b;
   text-decoration: none;
+}
+
+.footerList i {
+  transition: 0.5s ease;
+}
+
+.footerList i:hover {
+  transform: rotate(360deg);
 }
 
 /* LIGHT/DARK MODE */
@@ -281,6 +328,10 @@ p {
     margin: 5px auto;
   }
 
+  h1 {
+    font-size: 30px;
+  }
+
   nav li {
     width: 27%;
     margin: 5px auto;
@@ -337,6 +388,18 @@ p {
   #next {
     right: 3%;
   }
+}
+
+.contacts a {
+  font-size: 14px;
+}
+
+.contacts ul {
+  padding: 20px 35px;
+}
+
+.contacts ul li {
+  padding: 8px;
 }
 
 /* On iPhone 5 and smaller */
